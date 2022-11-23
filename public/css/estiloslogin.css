@@ -1,19 +1,30 @@
-@font-face {
-    font-family: 'Glyphicons Halflings';
-    src: url("https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot");
-    src: url("https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.woff") format("woff"), url("https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.ttf") format("truetype"), url("https://netdna.bootstrapcdn.com/bootstrap/3.0.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular") format("svg"); }
-  
+
 
 body{
     background: url(taller.jpg);
-    font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+    font-family: 'Share Tech Mono', monospace;
     font-size: 15px;
     border-radius: 15px;
 
 }
 
 h3 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Share Tech Mono', monospace;
+
     font-size: 15px;
 
+}
+
+h1 {
+    font-family: 'Share Tech Mono', monospace;
+    color: black;
+    font-size: 35px;
+    text-shadow: 0 0 20px rgba(105,105, 105,1), 0 0 20px rgba(10,175, 230,0) ;
+}
+
+a{
+    font-family: 'Share Tech Mono', monospace;
+    color: black;
+    font-size: 25px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.877), 0 0 20px rgba(10,175, 230,0) ;
 }

@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,21 @@ Route::get('/', function () {
     return view('home');
 });
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => 'prevent-back-history'],function(){
+	Auth::routes();
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/change-password', [App\Http\Controllers\HomeController::class, 'changePassword'])->name('change-password');
+    Route::post('/update-password', [App\Http\Controllers\HomeController::class, 'updatePassword'])->name('update-password');
+
+    Route::resource('horario', App\Http\Controllers\HorarioController::class);
+    Route::resource('asistencia', App\Http\Controllers\AsistenciaController::class);
+    
+    Route::resource('cargo', App\Http\Controllers\CargoController::class);
+    Route::resource('empleado', App\Http\Controllers\EmpleadoController::class);
+
+});
+
+Route::get('/asistencia/marcarasistencia', function () {
+    return view('/asistencia/marcarasistencia');
+});
